@@ -1,0 +1,1 @@
+(\x:nat+bool. case x of inl a => inr(a):bool, inr a => inl(a):nat)

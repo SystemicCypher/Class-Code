@@ -1,0 +1,18 @@
+# Some well-typed expressions.
+# Also found in Examples/Good/*.stlc
+
+\x:nat. x
+(\x:(nat*bool). fst(x)) (1, true)
+\x:(nat*bool). (snd(x),fst(x))
+(\y:nat*nat. \s:bool+bool. case s of inl a => fst(y), inr a => snd(y)) (1, 2) (inr(true):bool)
+(\x:nat+bool. case x of inl a => inr(a):bool, inr a => inl(a):nat)
+(\f:nat->nat. \x:nat. f (f x)) (add 5) 10
+
+
+# Some ill-typed expressions.
+# Also found in Examples/Bad/*.stlc
+
+(\x:(nat*bool). (snd(x),fst(x))) (1, 2)
+fst(5)
+(\x:nat*nat*nat.fst(x)) (1, 2)
+(\f:nat->nat. \x:nat. f (f x)) add 10

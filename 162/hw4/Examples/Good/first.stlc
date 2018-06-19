@@ -1,0 +1,1 @@
+(\x:(nat*bool). fst(x)) (1, true)

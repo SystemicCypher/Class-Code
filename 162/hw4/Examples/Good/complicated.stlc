@@ -1,0 +1,1 @@
+(\y:nat*nat. \s:bool+bool. case s of inl a => fst(y), inr a => snd(y)) (1, 2) (inr(true):bool)

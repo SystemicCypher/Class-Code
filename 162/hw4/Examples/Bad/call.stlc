@@ -1,0 +1,1 @@
+(\f:nat->nat. \x:nat. f (f x)) add 10
